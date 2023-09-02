@@ -51,7 +51,7 @@ public enum PowerState {
 			var value = ops.getStringValue(input).get().left();
 
 			if (value.isEmpty()) {
-				return DataResult.error(() -> "Power state must not be empty!");
+				return DataResult.error("Power state must not be empty!");
 			} else {
 				return DataResult.success(PowerState.valueOf(value.get().toUpperCase(Locale.ROOT)));
 			}

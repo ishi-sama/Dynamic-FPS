@@ -37,7 +37,7 @@ public enum GraphicsState {
 			var value = ops.getStringValue(input).get().left();
 
 			if (value.isEmpty()) {
-				return DataResult.error(() -> "Graphics state must not be empty!");
+				return DataResult.error("Graphics state must not be empty!");
 			} else {
 				return DataResult.success(GraphicsState.valueOf(value.get().toUpperCase(Locale.ROOT)));
 			}
